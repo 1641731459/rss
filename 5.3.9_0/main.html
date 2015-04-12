@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<title>feeder</title>
+<title>订阅</title>
 <div style="display:none" id="__is-what" data-type="app"></div>
 
 <!-- MAIN BEGIN -->
@@ -12,7 +12,7 @@
 
 <template id="popup#head">
 	<div id="link-queue">
-		Open <span class="num">10</span> post<span class="one">s</span>
+		打开 <span class="num">10</span> post<span class="one">s</span>
 		<a href="#" class="close">×</a>
 	</div>
 	<div id="notifications">
@@ -48,7 +48,7 @@
 		</div>
 		<div class="item-remove"><span class="icons cross"></div>
 		<tpl from="count-group"></tpl>
-		<div class="item-edit-button action-button semi">Edit</div>
+		<div class="item-edit-button action-button semi">编辑</div>
 	</div>
 	<tpl from="drawer-menu#feed" class="tpl-drawer-menu"></tpl>
 </template>
@@ -60,13 +60,13 @@
 
 <template id="follow-button">
 	<div class="following" data="following:data-following" data-following=""></div>
-	<div class="follow">+ Follow</div>
-	<div class="unfollow">✔ Following</div>
+	<div class="follow">订阅</div>
+	<div class="unfollow">✔ 订阅中</div>
 </template>
 
 <template id="drawer-menu#feed">
 		<div class="drawer-button edit-feed"><div class="table-container"><span class="icons wrench"></span> Edit</div></div>
-		<div class="drawer-button open-all-unread"><div class="table-container"><span class="icons forward-arrow"></span> Open all unread</div></div>
+		<div class="drawer-button open-all-unread"><div class="table-container"><span class="icons forward-arrow"></span> 打开所有未读新闻</div></div>
 
 	<div class="drawer-button cancel" title="Cancel"><div class="table-container"><span class="icons cross"></span></div></div>
 </template>
@@ -112,42 +112,42 @@
 	<tpl from="bar#settings"></tpl>
 	<!--<div class="heading">Recommended feeds</div> -->
 	<tpl from="feed-list"></tpl>
-	<div class="heading">Import feeds</div>
+	<div class="heading">添加订阅</div>
 	<div class="import-from">
 		<div class="not-online action-button get-feeder-pro">From feeder <span class="pro-badge">pro</span></div>
 		<div class="link-text open-sync-settings">From .opml</div>
 	</div>
 
-	<div class="arrow-text right-up add-feeds-here">Click here to add feeds</div>
+	<div class="arrow-text right-up add-feeds-here">点击添加订阅</div>
 </template>
 
 <template id="screen#no-unread">
 	<div class="screen-wrapper">
 		<span class="big-icons check"></span>
-		<div class="header">You have no unread posts</div>
-		<div class="subtext">Now, get back to work</div>
+		<div class="header">没有未读新闻</div>
+		<div class="subtext">返回</div>
 	</div>
 </template>
 
 <template id="screen#no-posts">
-	<div class="header">No posts here yet...</div>
+	<div class="header">还没有新闻..</div>
 	<div class="subtext">Chirp chirp, chirp chirp</div>
 </template>
 
 <template id="screen#no-starred">
 	<div class="screen-wrapper">
 		<span class="big-icons star"></span>
-		<div class="header">You have no starred posts</div>
-		<div class="subtext">Star posts to save for later</div>
+		<div class="header">没有收藏新闻</div>
+		<div class="subtext">收藏新闻</div>
 
-		<div class="help-button"><div class="action-button start-tutorial">How do I star posts?</div></div>
+		<div class="help-button"><div class="action-button start-tutorial">怎样收藏新闻？</div></div>
 		<div class="tutorial hidden">
 			<tpl from="post-list"></tpl>
 			<div class="tutorial-arrows">
-				<div class="arrow-text right-up click-to-open hidden">Click to open</div>
-				<div class="arrow-text left-up click-to-star hidden">Click to star post</div>
+				<div class="arrow-text right-up click-to-open hidden">点击开始</div>
+				<div class="arrow-text left-up click-to-star hidden">点击收藏新闻</div>
 			</div>
-			<div class="help-button"><div class="action-button end-tutorial hidden">Thanks, got it!</div></div>
+			<div class="help-button"><div class="action-button end-tutorial hidden">谢谢，明白！！</div></div>
 		</div>
 	</div>
 </template>
@@ -156,11 +156,11 @@
 	<div class="welcome-container">
 		<div class="cover"></div>
 
-		<div class="main-header">Welcome to feeder</div>
-		<div class="main-subtext">The easiest feed reader</div>
+		<div class="main-header">欢迎订阅</div>
+		<div class="main-subtext">最简单的阅读器</div>
 
-		<div class="subtext">Now, let's get you started on some feeds</div>
-		<div class="help-button"><div class="action-button big good start-using-feeder">Start using feeder</div></div>
+		<div class="subtext">让我们开始订阅吧！！</div>
+		<div class="help-button"><div class="action-button big good start-using-feeder">开始使用阅读器</div></div>
 	</div>
 </template>
 
@@ -179,9 +179,9 @@
 </template>
 
 <template id="post-list">
-	<div class="x-more-available" style="display:none"><span class="num"></span> new post<span class="multiple">s</span>. Click to load 'em</div>
+	<div class="x-more-available" style="display:none"><span class="num"></span> 新消息<span class="multiple">s</span>点击加载em</div>
 	<tpl from="list-item#post" class="list-item" many="posts"></tpl>
-	<div class="load-more" style="display:none"><strong>+</strong> Load more</div>
+	<div class="load-more" style="display:none"><strong>+</strong> 加载更多</div>
 </template>
 
 <template id="list-item#post">
@@ -197,9 +197,9 @@
 </template>
 
 <template id="drawer-menu#post">
-	<div class="drawer-button star-post"><div class="table-container"><span class="icons star"></span> Star post</div></div>
-	<div class="drawer-button mark-as-read"><div class="table-container"><span class="icons checked-badge"></span> Mark as read</div></div>
-	<div class="drawer-button mark-as-unread"><div class="table-container"><span class="icons checked-badge"></span> Mark as unread</div></div>
+	<div class="drawer-button star-post"><div class="table-container"><span class="icons star"></span> 收藏消息</div></div>
+	<div class="drawer-button mark-as-read"><div class="table-container"><span class="icons checked-badge"></span> 已读标记</div></div>
+	<div class="drawer-button mark-as-unread"><div class="table-container"><span class="icons checked-badge"></span> 未读标记</div></div>
 	<div class="drawer-button cancel" title="Cancel"><div class="table-container"><span class="icons cross"></span></div></div>
 </template>
 
@@ -245,11 +245,11 @@
 </template>
 
 <template id="box#add-feeds">
-	<div class="heading">Add feed</div>
+	<div class="heading">添加订阅</div>
 	<form class="add-feed-form">
 		<label class="full">
-			<span class="description">Enter a site or feed url to search for feeds</span>
-			<span class="empty-search-result">No feeds found</span>
+			<span class="description">搜索网站</span>
+			<span class="empty-search-result">未搜索订阅</span>
 			<input type="text" name="url" class="url" />
 		</label>
 		<div class="submit-container">
@@ -264,10 +264,11 @@
 </template>
 
 <template id="box#add-folder">
-	<div class="heading">Add folder</div>
+	<div class="heading">添加订阅</div>
 	<form class="add-folder-form">
 		<label class="full">
-			<span class="description">Enter folder name</span>
+			<span class="description">输入文件夹名称
+</span>
 			<input type="text" name="folder-name" class="url" />
 		</label>
 		<div class="submit-container">
@@ -285,7 +286,7 @@
 </template>
 
 <template id="box#add-from-page">
-	<div class="heading">Feeds on current page</div>
+	<div class="heading">订阅当前页面</div>
 	<form class="add-from-page-form">
 		<div class="nested-list">
 			<div class="item" many="feeds-on-page">
@@ -309,15 +310,15 @@
 
 	<tpl from="box#accounts"></tpl>
 	<div class="change-update-interval">
-		<div class="heading">Feed update interval (minutes)</div>
+		<div class="heading">提要更新时间间隔(分钟)</div>
 		<div class="no-pro">
 			<tpl from="box#update-interval"></tpl>
 		</div>
 		<div class="pro-user settings-info">
-			<p>Our servers check for new post at least every 10 minutes.</p>
+			<p>我们的服务器检查新帖子至少每10分钟一次.</p>
 		</div>
 	</div>
-	<div class="heading">Posts to display</div>
+	<div class="heading">文章显示</div>
 	<tpl from="box#posts-display"></tpl>
 	<tpl from="box#privacy"></tpl>
 	<tpl from="box#open-externalsettings"></tpl>
@@ -325,35 +326,35 @@
 </template>
 
 <template id="box#general">
-	<div class="heading">General</div>
+	<div class="heading">通用设置</div>
 	<div class="setting">
-		<div class="label global-notifications">Global notifications</div>
+		<div class="label global-notifications">全局通知</div>
 		<tpl from="yes-no" pui="YesNo" key="global-notifications" class="setter"></tpl>
 	</div>
 	<div class="setting">
-		<div class="label global-notifications">Global sound notifications</div>
+		<div class="label global-notifications">全局声音通知</div>
 		<tpl from="yes-no" pui="YesNo" key="global-sound-notifications" class="setter"></tpl>
 	</div>
 	<div class="setting">
-		<span class="label">Open posts in new tab</span>
+		<span class="label">在新标签页打开帖子</span>
 		<tpl from="yes-no" pui="YesNo" key="open-posts-in-new-tab" class="setter"></tpl>
 	</div>
 	<div class="setting">
-		<span class="label">Show unread count in badge</span>
+		<span class="label">在图标上显示未读条数</span>
 		<tpl from="yes-no" pui="YesNo" key="show-unread-count-in-badge" class="setter"></tpl>
 	</div>
 </template>
 
 <template id="box#privacy">
-	<div class="heading">Privacy</div>
+	<div class="heading">隐私</div>
 	<div class="setting">
-		<div class="label global-notifications">Anonymous statistics</div>
+		<div class="label global-notifications">匿名统计</div>
 		<tpl from="yes-no" pui="YesNo" key="globalTr" class="setter"></tpl>
 	</div>
 </template>
 
 <template id="box#switch-theme">
-	<div class="heading">Switch theme</div>
+	<div class="heading">切换主题</div>
 	<div class="settings-content">
 		<tpl from="theme#item" many="themes"></tpl>
 	</div>
@@ -367,11 +368,11 @@
 </template>
 
 <template id="box#accounts">
-	<div class="heading">Accounts</div>
+	<div class="heading">账目</div>
 	<div class="action-button connect-acc connect-feeder-pro get-feeder-pro"><span class="speccon icons-feeder-acc"></span> Connect <strong>feeder <span class="pro-badge">Pro</span></strong></div>
 	<div class="connected-to connected-to-feeder-pro">
 		<span class="speccon icons-feeder-acc"></span>
-		<span class="connected-feeder-pro-username connected-username">Connected as:<span></span></span>
+		<span class="connected-feeder-pro-username connected-username">联系:<span></span></span>
 		<span class="feeder-pro-email connected-email" data="feeder-pro-email:text"></span>
 		<span class="remove-subscription"><span class="icons cross"></span></span>
 	</div>
@@ -394,15 +395,15 @@
 </template>
 
 <template id="box#open-externalsettings">
-	<div class="heading">Open external settings</div>
+	<div class="heading">开放的外部设置</div>
 	<div id="open-external" class="action-button">
-		Open external settings
+		开放的外部设置
 	</div>
 </template>
 
 <template id="box#social-feeder">
 	<div class="heading">
-		Follow Feeder
+		继续订阅
 		<tpl from="follow-button" pui="FollowButton" key="follow-feeder"></tpl>
 	</div>
 	<div id="social-bar">
@@ -414,9 +415,9 @@
 <template id="yes-no">
 	<div class="yes-no-wrapper">
 		<div class="yes-no">
-			<span class="yes">On</span>
+			<span class="yes">打开</span>
 			<span class="dong"></span>
-			<span class="no">Off</span>
+			<span class="no">关闭</span>
 			<span class="shadow"></span>
 		</div>
 	</div>
@@ -445,7 +446,7 @@
 				<tpl from="nested-list-results#feed"></tpl>
 			</div>
 		</div>
-		<p class="text"><small>Sorry about that...</small></p>
+		<p class="text"><small>抱歉……</small></p>
 	</form>
 </template>
 
@@ -455,14 +456,14 @@
 	<tpl from="bar#settings"></tpl>
 	<form class="remove-sync loading">
 		<div class="loader-cover"></div>
-		<p style="margin-bottom: 10px"><a class="info-link" href='http://blog.feeder.co/post/54280867264/google-reader-is-retiring-here-is-what-you-should-do'>Read more here</a></p>
-		<p class="with-bad-feeds text">The following feeds could not be recovered, and were removed:</p>
+		<p style="margin-bottom: 10px"><a class="info-link" href='http://blog.feeder.co/post/54280867264/google-reader-is-retiring-here-is-what-you-should-do'>在这里阅读更多</a></p>
+		<p class="with-bad-feeds text">以下提要不能恢复和删除:</p>
 		<div class="nested-list with-bad-feeds bad-feeds">
 			<div class="item" many="bad-feeds">
 				<tpl from="nested-list-results#feed"></tpl>
 			</div>
 		</div>
-		<p class="text with-bad-feeds"><small>Sorry about that...</small></p>
+		<p class="text with-bad-feeds"><small>抱歉……</small></p>
 	</form>
 </template>
 
@@ -473,38 +474,38 @@
 </template>
 
 <template id="box#settings-feed">
-	<div class="heading">Settings</div>
+	<div class="heading">设置</div>
 	<form class="feed-settings-form">
 		<label class="inline">
-			<span>Title</span>
+			<span>标题</span>
 			<input type="text" name="title" placeholder="Title..." />
 		</label>
 		<label class="inline">
-			<span>Path</span>
+			<span>途径</span>
 			<input type="text" name="path" placeholder="URL..." readonly="readonly" />
 		</label>
 		<hr />
-		<div class="heading">Posts to display</div>
+		<div class="heading">文章显示</div>
 		<tpl from="box#posts-display"></tpl>
 		<hr />
 		<div class="change-update-interval">
-			<div class="heading">Update interval (minutes)</div>
+			<div class="heading">更新间隔(分钟)</div>
 			<tpl from="box#update-interval"></tpl>
 			<hr />
 		</div>
 		<div class="setting no-border">
-			<div class="label notifications">Notifications</div>
+			<div class="label notifications">通知</div>
 			<tpl from="yes-no" pui="YesNo" key="notifications" class="setter"></tpl>
 		</div>
 		<hr />
 		<div class="setting no-border">
-			<div class="label notifications">Sound notification</div>
+			<div class="label notifications">声音通知</div>
 			<tpl from="yes-no" pui="YesNo" key="soundNotifications" class="setter"></tpl>
 		</div>
 		<hr />
-		<div class="heading">Delete feed</div>
+		<div class="heading">删除订阅</div>
 		<div class="delete-container">
-			<div class="pui-button delete">Delete feed</div>
+			<div class="pui-button delete">删除订阅</div>
 		</div>
 	</form>
 </template>
@@ -516,10 +517,10 @@
 </template>
 
 <template id="box#settings-folder">
-	<div class="heading">Folder settings</div>
+	<div class="heading">文件夹设置</div>
 	<form class="folder-settings-form">
 		<label class="inline">
-			<span>Name</span>
+			<span>名字</span>
 			<input type="text" name="name" placeholder="Name..." />
 		</label>
 	</form>
@@ -529,8 +530,8 @@
 
 <template id="screen#options">
 	<header>
-		<h1>feeder</h1>
-		<a class="button back-to-feeds" href="#" data-title="Settings">Back to feeds</a>
+		<h1>订阅</h1>
+		<a class="button back-to-feeds" href="#" data-title="Settings">返回订阅</a>
 	</header>
 
 	<section class="content">
@@ -540,15 +541,15 @@
 				<tpl from="screen#get-pro" class="no-pro content-box"></tpl>
 				<div id="footer">
 					<ul>
-						<li>Feeder &copy; 2013</li>
-						<li><a href="http://www.rootof.com">Rootof</a></li>
-						<li><a href="/support">Support</a></li>
-						<li><a href="/legal">Legal</a></li>
+						<li>Feeder 版权所有; 2013</li>
+						<li><a href="http://www.rootof.com">嵌入式333</a></li>
+						<li><a href="/support">帮助</a></li>
+						<li><a href="/legal">法律申明</a></li>
 					</ul>
 					<ul>
-						<li><a href="http://blog.feeder.co/">Blog</a></li>
-						<li><a href="http://www.facebook.com/feederco">Facebook</a></li>
-						<li><a href="http://www.twitter.com/feederco">Twitter</a></li>
+						<li><a href="http://blog.feeder.co/">博客</a></li>
+						<li><a href="http://www.facebook.com/feederco">脸谱网</a></li>
+						<li><a href="http://www.twitter.com/feederco">推特</a></li>
 					</ul>
 				</div>
 			</div>
@@ -565,22 +566,22 @@
 
 <template id="screen#menu">
 	<div class="menu content-box">
-		<div data-page="tpl-page-organize" class="menu-item active" id="sort-feeds"><span class="icons sort-list"></span>Sort feeds <span class="icons arrow-right"></span></div>
+		<div data-page="tpl-page-organize" class="menu-item active" id="sort-feeds"><span class="icons sort-list"></span>分类提要 <span class="icons arrow-right"></span></div>
 		<div data-page="tpl-page-settings" class="menu-item" id="settings"><span class="icons cog"></span>Settings <span class="icons arrow-right"></span></div>
-		<div data-page="tpl-page-theme" class="menu-item" id="change-theme"><span class="icons themes"></span>Change theme <span class="icons arrow-right"></span></div>
-		<div class="menu-item profile-settings pro-user" id="profile-settings"><span class="icons user"></span>Profile settings <span class="icons arrow-right"></span></div>
+		<div data-page="tpl-page-theme" class="menu-item" id="change-theme"><span class="icons themes"></span>改变主题 <span class="icons arrow-right"></span></div>
+		<div class="menu-item profile-settings pro-user" id="profile-settings"><span class="icons user"></span>配置文件设置 <span class="icons arrow-right"></span></div>
 	</div>
 </template>
 
 <template id="screen#get-pro">
-	<span class="title">Go Pro</span>
+	<span class="title">去往 Pro</span>
 	<ul class="reasons-list">
-		<li>Read online, from anywhere</li>
-		<li>Sync between multiple computers"</li>
-		<li>Browse your feeds faster"</li>
-		<li>And more to come!</li>
+		<li>在线阅读,从任何地方</li>
+		<li>在不同电脑间同步"</li>
+		<li>快速浏览你的订阅"</li>
+		<li>更多!</li>
 	</ul>
-	<div class="support-us-button get-feeder-pro"><span></span>Get feeder pro</div>
+	<div class="support-us-button get-feeder-pro"><span></span>获得 feeder pro</div>
 </template>
 
 <!-- Options page: organize -->
@@ -619,8 +620,8 @@
 	<tpl from="bar#settings"></tpl>
 	<div class="tpl-module-content">
 		<div class="export-things">
-			<p>Export feeds for safekeeping or so to import them to other computers or services.</p>
-			<div class="action-button export"><span class="icons folder-right"></span>Export feeds to file</div>
+			<p>发送给重要的人或安全的电脑和服务</p>
+			<div class="action-button export"><span class="icons folder-right"></span>导出提要到文件</div>
 		</div>
 		<form class="import-form">
 			<div class="action-button import"><span class="icons download"></span>Import feeds from file</div>
