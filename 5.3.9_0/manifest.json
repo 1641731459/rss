@@ -20,7 +20,7 @@
       "run_at": "document_end"
    } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-   "description": "Get a simple overview of your RSS and Atom feeds in the toolbar",
+   "description": "获取RSS阅读器，让它方便的显示在你的工具栏",
    "icons": {
       "128": "icons/icon128x128.png",
       "16": "icons/icon16x16.png",
@@ -42,7 +42,7 @@
    },
    "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDSk70DzQ0XRPEINteLpZyjPmFVPgbPePTiy3z2VEWHy8e1hFbOdP32SuiWcshHuZHvCvU3oZdZHJ9h3zKBw100ZzOcIPa8UHxi8klYfwf2QJu+yAYIAm36IlRin8JnwCWIoE7ZcFfLVyXci6LmnIepS69x+asjyPH7zEjmNfcYwIDAQAB",
    "manifest_version": 2,
-   "name": "RSS Feed Reader",
+   "name": "RSS 阅读器",
    "options_page": "options.html",
    "permissions": [ "tabs", "http://*/*", "https://*/*", "chrome://favicon/", "storage", "notifications", "webNavigation", "webRequest", "webRequestBlocking" ],
    "short_name": "feeder",
