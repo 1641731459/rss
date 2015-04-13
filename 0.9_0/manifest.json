@@ -1,0 +1,27 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery-2.0.0.min.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/rt_logo_19x19.png",
+         "38": "images/rt_logo_38x38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "RT News"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Find out what the mainstream media is keeping silent about.",
+   "icons": {
+      "128": "images/rt_logo_128x128.png",
+      "48": "images/rt_logo_48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJKd1gyAFhNjyd/zuowSCPswqG2g9kjQFzHPN+aQd5434foOpLQtMx9yl4iHX1t+ct38psN1gkeMAcqph61l6VWH6gabSFypJOq7eMIYCkdnGCiWzOdI3pmeFdWmO3DJJPwaT+VUGOmoh4d6m7fkdJfNp9vuGF45IOrZ7OlwyJJQIDAQAB",
+   "manifest_version": 2,
+   "name": "RT News",
+   "permissions": [ "tabs", "http://rt.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.9",
+   "web_accessible_resources": [ "images/logo.png", "check.html" ]
+}
