@@ -271,6 +271,8 @@ function showBreakingNews() {
     }
     isbreaking = 1;
     showNews();
+    console.log("sunxiaoyu");
+    console.log('xiaoxixixoxoixiciicicicicicicicicii`');
 }
 
 function showLive() {
